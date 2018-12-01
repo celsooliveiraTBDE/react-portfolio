@@ -30,7 +30,7 @@ $primary-invert: $pink-invert;
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700');
+@import url('https://fonts.googleapis.com/css?family=Barlow');
 
 // Set your brand colors
 $not-so-gray: #b8b8b8;
@@ -38,18 +38,21 @@ $naranja: #FF5733;
 $way-gray: #707070;
 $some-light: #f0f0f0;
 $super-lighter: #FFFFFF;
+$super-duper-grey: #363636;
 
 // Update Bulma's global variables
-$family-sans-serif: "Barlow", sans-serif;
+$family-sans-serif: 'Barlow';
 $grey-dark: $way-gray;
-$grey-light: $some-light;
-$primary: $not-so-gray;
+$grey-light: $not-so-gray;
+$primary: $way-gray;
 $danger: $naranja;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
-
+$gap: 0px;
 // Update some of Bulma's component variables
-$body-background-color: $not-so-gray;
+$body-background-color: $super-duper-grey;
 $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;@import "../node_modules/bulma/bulma";
+$navbar: $way-gray;
+$footer-background-color: $naranja;

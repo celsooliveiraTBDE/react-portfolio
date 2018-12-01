@@ -33,25 +33,28 @@ export default class Sidebar extends React.Component {
     render() {
         return (
 
-            <div className="hero-body">
+            <div className="hero-head">
 
-                <NavbarToggler onMouseEnter={this.toggle} onMouseLeave={this.toggle} className="mr-2"/>
-
-                <Collapse isOpen={this.state.isOpen} navbar>
-
-                    <Nav className="ml-auto" navbar>
-
-                        <NavItem>
-                            <NavLink className="title is-4 is-centered" href="/about">About</NavLink>
+                    <Nav className= 'navbar is-uppercase is-centered pl-4 has-text-grey-light'>
+                    <span className="level-item py-5 pr-2 mx-auto is-borderless">
+                  <i className="fas fa-6x fa-globe"></i>
+                </span>      
+                        <NavItem className="container is-gapless">
+                            <NavLink className="title is-4 level-item " href="/about">About</NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink className="title is-4 is-centered" href="/blog">Blog</NavLink>
+                        <hr className="navbar-divider is-full-width is-primary has-background-grey-dark"/>
+
+                        <NavItem className="container is-gapless">
+                            <NavLink className="title is-4 level-item " href="/blog">Blog</NavLink>
                         </NavItem>
-                        <NavItem>
-                            <NavLink className="title is-4 is-centered" href="/contact">Contact</NavLink>
+                        <hr className="navbar-divider is-full-width"/>
+                       
+                        <NavItem className="container is-gapless">
+                            <NavLink className="title is-4 level-item " href="/contact">Contact</NavLink>
                         </NavItem>
-                    </Nav>
-                </Collapse>
+
+                        <hr className="navbar-divider is-full-width"/>
+            </Nav>
             </div>
 
         )

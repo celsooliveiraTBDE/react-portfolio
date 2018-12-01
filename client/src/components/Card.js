@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardLink,
   CardTitle, CardSubtitle } from 'reactstrap';
 
-const Example = (props) => {
+const MyCard = (props) => {
   return (
     <div>
       <Card>
@@ -21,4 +21,4 @@ const Example = (props) => {
   );
 };
 
-export default Example;
+export default MyCard;
