@@ -7,6 +7,7 @@ exports.index = function(req, res) {
 // Display list of all blog posts.
 exports.blog_list = function(req, res) {
     Blog.find()
+    .populate({path:'author'})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));};
 

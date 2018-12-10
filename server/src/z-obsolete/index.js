@@ -4,43 +4,30 @@ const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
-
-// to be used
-const session = require('express-session');
-const cors = require('cors');
-const errorHandler = require('errorhandler');
-
-
-// ROUTES FILES
+// OUR FILES
 const indexRouter = require('./routes/index');
-const catalogRouter = require('./routes/blog');
-const commentsRouter = require('./routes/comment')  //Import routes for "catalog" area of site
-const usersRouter = require('./routes/user')
+const catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
+
+//MONGOOSE CONFIG
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-//MONGOOSE CONFIG
 
 mongoose.Promise = global.Promise
 mongoose.connect('mongodb://localhost/react-blog-application', {useNewUrlParser: true})
 mongoose.set ('useFindAndModify', false)
 
-// MIDDLEWARE
-app.use(cors());
-app.use(require('morgan')('dev'));
-app.use(bodyParser.urlencoded({ extended: false }));
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({ secret: 'LightBlog', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
 
 
 app.use('/', indexRouter);
-app.use('/blog', catalogRouter);  // Add catalog routes to middleware chain.
-app.use('/comment', commentsRouter);
-app.use('/users', usersRouter);
-
-// ERROR HANDLING 
+app.use('/catalog', catalogRouter);  // Add catalog routes to middleware chain.
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -60,8 +47,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// LISTENING 
-
-const server = app.listen(PORT, function () {
+app.listen(PORT, function () {
   console.log(`🌎 ==> NOW LISTENING 🎧  ON PORT ${PORT}!`);
 });

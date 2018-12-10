@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {
-    Card, CardImg, CardText, CardBody, CardLink, CardDeck,
-    CardTitle, CardSubtitle
+    Card, CardText, CardLink, CardDeck,
+    
 } from 'reactstrap';
 const items = [
     {
         CardTitle: 'Street Art Finder',
         CardText: 'An interactive exploration of Instragrammable streetart in the City of Angels',
-        CardImg: '../assets/ORG_DSC03400.JPG',
+        CardImg: '../assets/project-images/streetart.png',
         CardLink: ['Demo', 'Github'],
         CardSubtitle: "Full Stack: Firebase Backend"
 
@@ -17,14 +17,14 @@ const items = [
         CardSubtitle: 'Full Stack MVC: Node/Express.js ',
         CardText: 'An interactive exploration of Instragrammable streetart in the City of Angels',
 
-        CardImg: '../assets/ORG_DSC03400.JPG',
+        CardImg: '../assets/project-images/scrn-canvas.png',
         CardLink: ['Demo', 'Github']
     },
     {
         CardTitle: 'AR Camera App',
         CardSubtitle: 'React.js + Node/Express.js ',
-        CardText: 'AA mobile-friendly prototype which allows users to get a taste of AR using only their phones',
-        CardImg: '../assets/ORG_DSC03400.JPG',
+        CardText: 'A mobile-friendly prototype allowing users to get a taste of AR using only their phones',
+        CardImg: '../assets/project-images/Astrolab.png',
         CardLink: ['Demo', 'Github']
     }
 ];
@@ -37,7 +37,7 @@ class Portfolio extends Component {
         const cards = items.map((item) => {
             return (
                 <Card
-                    className="card"
+                    className="column"
                     tag="div"
                     key={item.CardTitle}
                 >
@@ -50,7 +50,7 @@ class Portfolio extends Component {
                         <div className="media">
                             <div className="media-left">
                                 <figure className="image is-48x48">
-                                    <img src="../assets/logo.svg" alt="Placeholder image" />
+                                    <img src="../assets/logo.svg" alt={item.CardTitle} />
                                 </figure>
                             </div>
                             <div className="media-content">
@@ -72,8 +72,8 @@ class Portfolio extends Component {
         return (
             <CardDeck className='section level has-background-white'>
                 <div className='level-left is-full-width pb-4'><span className='level-item title is-size-2 has-text-white'>    CURRENT PROJECTS</span></div>
-
-                {cards}
+                <div className="columns is-mobile">   
+                {cards}</div>
             </CardDeck>
 
         )

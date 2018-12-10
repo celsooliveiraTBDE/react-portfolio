@@ -1,18 +1,13 @@
 import React from 'react';
 import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
+
     Nav,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
+    NavLink
+
 } from 'reactstrap';
-import { Link } from 'react-router-dom'
+import SocialBar from './SocialBar';
+
 
 export default class Sidebar extends React.Component {
 
@@ -35,26 +30,29 @@ export default class Sidebar extends React.Component {
 
             <div className="hero-head">
 
-                    <Nav className= 'navbar is-uppercase is-centered pl-4 has-text-grey-light'>
-                    <span className="level-item py-5 pr-2 mx-auto is-borderless">
-                  <i className="fas fa-6x fa-globe"></i>
-                </span>      
-                        <NavItem className="container is-gapless">
-                            <NavLink className="title is-4 level-item " href="/about">About</NavLink>
-                        </NavItem>
-                        <hr className="navbar-divider is-full-width is-primary has-background-grey-dark"/>
+                <Nav className='navbar is-uppercase is-centered pl-4 has-text-grey-light'>
+                    <span className="level-item py-5 pr-2 mx-auto is-hidden-touch is-borderless">
+                        <i className="fas fa-6x fa-globe is-hidden-touch"></i>
+                    </span>
+                    <hr className="navbar-divider is-full-width is-primary has-background-grey-dark" />
 
-                        <NavItem className="container is-gapless">
-                            <NavLink className="title is-4 level-item " href="/blog">Blog</NavLink>
-                        </NavItem>
-                        <hr className="navbar-divider is-full-width"/>
-                       
-                        <NavItem className="container is-gapless">
-                            <NavLink className="title is-4 level-item " href="/contact">Contact</NavLink>
-                        </NavItem>
+                    <SocialBar />
+<br/>
+                    <NavItem className="container is-gapless has-text-centered-mobile">
+                        <NavLink className="title is-4 level-item " href="/about">About</NavLink>
+                    </NavItem>
+                    <hr className="navbar-divider is-full-width is-primary has-background-grey-dark" />
 
-                        <hr className="navbar-divider is-full-width"/>
-            </Nav>
+                    <NavItem className="container is-gapless has-text-centered-mobile">
+                        <NavLink className="title is-4 level-item " href="/blog">Blog</NavLink>
+                    </NavItem>
+                    <hr className="navbar-divider is-full-width" />
+
+                    <NavItem className="container is-gapless has-text-centered-mobile">
+                        <NavLink className="title is-4 level-item " href="/contact">Contact</NavLink>
+                    </NavItem>
+                    <hr className="navbar-divider is-full-width" />
+                </Nav>
             </div>
 
         )

@@ -9,6 +9,9 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import reducers from './reducers'
 import './index.css';
 import App from './App';
+import About from './components/about'
+import Contact from './components/ContactModal'
+
 import PostsNew from './components/posts_new'
 import PostsShow from './components/posts_show'
 import PostsIndex from './components/PostList'
@@ -25,15 +28,15 @@ ReactDOM.render(<Provider store={store}>
 
 <BrowserRouter>
 
-
         <Switch>
           
-          {/* <Route path="/blog/new" component={PostsNew}></Route> */}
+          <Route path="/blog/new" component={PostsNew}></Route>
           <Route path="/blog/:id" component={PostsShow}></Route>
 
-          <Route path="/projects" component={Portfolio}></Route>
-
+          <Route path="/about" component={About}></Route>
           <Route path="/blog" component={PostsIndex}></Route>
+          <Route path="/contact" component={Contact}></Route>
+          <Route path="/projects" component={Portfolio}></Route>
 
           <Route path="/" component={App}></Route>
         </Switch>
