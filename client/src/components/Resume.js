@@ -1,9 +1,8 @@
 import React from "react";
-export default class Example extends React.Component {
+export default class Resume extends React.Component {
   render() {
     return (
       <div className="section is-white">
-                <div className='level-left is-full-width pb-4'><span className='level-item title is-size-2 has-text-white'> AT GLANCE</span></div>
           <div className="tile is-ancestor">
             <div className="tile is-vertical is-8">
 

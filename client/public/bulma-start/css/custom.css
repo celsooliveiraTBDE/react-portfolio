@@ -3,10 +3,17 @@ html {
     height: 100%;
 }
 
-.bg {
+#main-tile-image {
     /* The image used */
     background-image: url("../../assets/Imports/DSCF2623.jpg");
+}
 
+#about-me-tile-image {
+    /* The image used */
+    background-image: url("../../assets/IMG_2949.JPG");
+}
+
+.bg {
     /* Full height */
     height: 100%;
 
@@ -27,9 +34,11 @@ hr.navbar-divider {
 #dark-line-break {
     background-color: #707070;
 }
+
 #light-line-break {
     background-color: #f0f0f0;
 }
+
 .navbar.is-dark {
     min-height: 2rem
 }
@@ -57,15 +66,37 @@ hr.navbar-divider {
     padding: 25px;
 }
 
-@media screen and (max-width: 1440px) {
-
-    .inner {
-        padding: 50px;
-    }
-
+.tile:hover {
+    transform: scale(1.01);
 }
-@media screen and (max-width: 768px){
-    #my-sidebar-on-mobile{
-        min-height: auto
+
+    @media screen and (max-width: 1440px) {
+
+        .inner {
+            padding: 50px;
+        }
+
     }
+
+    @media screen and (max-width: 768px) {
+        #my-sidebar-on-mobile {
+            min-height: auto
+        }
+        
+        .title.is-4 {
+                font-size: 1rem;
+            }
+        
+    }
+
+    .stitched
+{
+background-color:darkred;
+width:200px;
+font-size:20px;
+color:white; 
+padding:20px; 
+border:2px dashed white; 
+border-radius:20px; 
+box-shadow:0px 0px 4px 4px darkred; 
 }
