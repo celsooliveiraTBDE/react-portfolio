@@ -1,9 +1,7 @@
 import React from 'react';
-import {
+import {Link} from 'react-router-dom'
  
-    Nav
- 
-} from 'reactstrap';
+  import   {Nav} from 'reactstrap';
 
 export default class MktNavBar extends React.Component {
 
@@ -25,23 +23,24 @@ export default class MktNavBar extends React.Component {
         return (
 
 
-            <Nav className='navbar level is-uppercase is-centered is-size-1 is-black nav is-marginless'>
+            <Nav className='navbar level is-uppercase is-centered is-size-1 is-black nav is-marginless is-paddingless'>
+                      
                 <div className="level-item has-text-centered">
-                    <div>
-                        <p className="heading">Celso Oliveira</p>
-                    </div>
+                
+                        <p className="heading has-text-danger">Celso Oliveira</p>
+              
                 </div>
                 <div className="level-item has-text-centered">
-                    <div>
+                 
                         <p className="heading">Phone</p>
-                        <p className="heading">614-906-0387</p>
-                    </div>
+                        <Link className="heading has-text-primary" to='/phone'>(213)233-6168</Link>
+                
                 </div>
                 <div className="level-item has-text-centered">
-                    <div>
+                
                         <p className="heading">Email</p>
-                        <p className="heading has-text-primary">celso.oliv@gmail.com</p>
-                    </div>
+                        <Link className="heading has-text-primary" to='/contact'>celso.oliv@gmail.com</Link>
+               
                 </div>
 
             </Nav>

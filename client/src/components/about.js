@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import MktNavbar from './MktNavBar'
 import Navbar from "./Navbar";
-import Sidebar from './Sidebar'
-import Portfolio from './projects'
 import Footer from "./Footer"
 import Resume from './Resume'
-import AboutMeTile from './AboutMeTile'
 class About extends Component {
   render() {
     return (
@@ -14,20 +11,12 @@ class About extends Component {
 
         <MktNavbar></MktNavbar>
         <Navbar />
-
-        <section className="columns is-gapless">
-          <div className="column is-one-fifth">
-            <div id='my-sidebar-on-mobile' className='hero is-dark is-fullheight'>
-              <Sidebar />
-            </div>
-          </div>
-
-          <div className="column is-four-fifths">
-<AboutMeTile />
+        <section className="hero is-danger py-1 my-0">
+          <div className="hero-body pt-1 mb-0 pb-0">
+            <div className='level-left is-full-width pb-2'><span className='level-item title is-size-2 has-text-white'> AT A GLANCE</span></div>
           </div>
         </section>
         <Resume />
-        <Portfolio />
         <Footer></Footer>
       </div>
     );

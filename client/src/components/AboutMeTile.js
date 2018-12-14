@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Resume from './Resume'
  
 export default class AboutMeTile extends React.Component {
 
@@ -9,12 +9,8 @@ export default class AboutMeTile extends React.Component {
               return(
             <div id='about-me-tile-image'className='hero bg is-primary is-fullheight'>
               <div className='inner'>
-                <div id='my-title-banner' >
-                  <div className="level-item title is-size-2 is-uppercase is-paddingless is-centered">Full Stack Developer</div>
-                  <hr className='is-full-width' />
-                  <div className="level-item title is-paddingless is-uppercase is-centered">Los Altos, California </div>
-                  <hr className='is-full-width is-paddingless' />
-                </div>
+              <Resume />
+
               </div>
             </div>
               )

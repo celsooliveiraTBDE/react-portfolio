@@ -5,12 +5,13 @@ html {
 
 #main-tile-image {
     /* The image used */
-    background-image: url("../../assets/Imports/DSCF2623.jpg");
+    background-image: url("../../assets/sunsetVentura.jpg");
 }
 
-#about-me-tile-image {
+#project-tile-image {
     /* The image used */
     background-image: url("../../assets/IMG_2949.JPG");
+    
 }
 
 .bg {
@@ -22,7 +23,9 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+.navbar{
+    padding: 0, 0, 0, 0
+}
 .is-full-width {
     width: 100%;
 }
@@ -60,43 +63,77 @@ hr.navbar-divider {
 }
 
 .inner {
-    margin: 27% 0 0 0;
+    margin: 30% 0 0 0;
     position: absolute;
     z-index: 2;
-    padding: 25px;
+    padding: 30px;
 }
 
 .tile:hover {
     transform: scale(1.01);
 }
-
-    @media screen and (max-width: 1440px) {
-
-        .inner {
-            padding: 50px;
-        }
-
-    }
-
-    @media screen and (max-width: 768px) {
-        #my-sidebar-on-mobile {
-            min-height: auto
-        }
-        
-        .title.is-4 {
-                font-size: 1rem;
-            }
-        
-    }
-
-    .stitched
-{
-background-color:darkred;
-width:200px;
-font-size:20px;
-color:white; 
-padding:20px; 
-border:2px dashed white; 
-border-radius:20px; 
-box-shadow:0px 0px 4px 4px darkred; 
+@media screen and (min-width: 1024px){
+.navbar {
+    min-height: 2rem;
 }
+
+}
+
+@media screen and (max-width: 1440px) {
+
+    .inner {
+        padding: 50px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #my-sidebar-on-mobile {
+        min-height: auto
+    }
+
+    .title{
+        font-size: 1rem; 
+    }
+    .title.is-4 {
+        font-size: 1rem;
+    }
+
+}
+.footer{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+a.has-text-link:hover, a.has-text-link:focus{
+    color: #FF5733 !important
+}
+
+.example-appear {
+    opacity: 0.01;
+  }
+  
+  .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+  }
+
+  .carousel{
+      padding: 1rem;
+  }
+  .carousel-inner{
+      padding: 5rem;
+  }
+  #resume-container{
+      background-color: #707070;
+      margin: 0%;
+      padding: 1px, 0px, 1px, 0px; 
+  }
+
+  .bg-light {
+    background-color: none;
+  }
+  .dropdown-menu.show {
+   
+    background: transparent;
+  }
