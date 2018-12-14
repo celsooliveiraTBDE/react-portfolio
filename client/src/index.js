@@ -11,10 +11,10 @@ import './index.css';
 import App from './App';
 import About from './components/about'
 import Contact from './components/ContactModal'
-
+import SidebarAnimations from './components/SidebarAnimations'
 import PostsNew from './components/posts_new'
 import PostsShow from './components/posts_show'
-import PostsIndex from './components/PostList'
+import PostsIndex from './components/posts_index'
 import Portfolio from './components/projects'
 import * as serviceWorker from './serviceWorker';
 
@@ -32,9 +32,9 @@ ReactDOM.render(<Provider store={store}>
           
           <Route path="/blog/new" component={PostsNew}></Route>
           <Route path="/blog/:id" component={PostsShow}></Route>
+          <Route path="/blog" component={PostsIndex}></Route>
 
           <Route path="/about" component={About}></Route>
-          <Route path="/blog" component={PostsIndex}></Route>
           <Route path="/contact" component={Contact}></Route>
           <Route path="/projects" component={Portfolio}></Route>
 

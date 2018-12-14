@@ -4046,7 +4046,7 @@ a.dropdown-item {
   padding: 20px; }
 
 .navbar {
-  background-color: white;
+  background-color: rgba(219, 219, 219, 1);
   min-height: 3.25rem;
   position: relative; }
   .navbar.is-white {
