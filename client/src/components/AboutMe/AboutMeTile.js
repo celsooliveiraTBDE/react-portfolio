@@ -9,7 +9,6 @@ export default class AboutMeTile extends React.Component {
               return(
             <div id='about-me-tile-image'className='hero bg is-primary is-fullheight'>
               <div className='inner'>
-              <Resume />
 
               </div>
             </div>

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getPost, deletePost } from '../actions';
+import { getPost, deletePost } from '../../actions';
 import { Link } from 'react-router-dom';
 
-import MktNavbar from './MktNavBar'
-import Navbar from "./Navbar";
-import Sidebar from './Sidebar'
-import Footer from './Footer'
+import MktNavbar from '../Navbar/MktNavBar'
+import Navbar from "../Navbar";
+import Sidebar from '../Sidebar/Sidebar'
+import Footer from '../Footer'
 
 class PostsShow extends Component {
 

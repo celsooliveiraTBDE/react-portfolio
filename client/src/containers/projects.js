@@ -3,10 +3,11 @@ import {
     Card, CardText, CardLink, CardDeck,
 
 } from 'reactstrap';
-import Navbar from './Navbar'
-import MktNavbar from './MktNavBar'
-import Carousel from './Carousel'
+import Navbar from '../components/Navbar'
+import MktNavbar from '../components/Navbar/MktNavBar'
+import Carousel from '../components/Carousel/'
 
+// add model so that projects are served and managed from the backend. 
 const items = [
     {
         CardTitle: 'Street Art Finder',
@@ -85,10 +86,10 @@ class Portfolio extends Component {
 
                 </div>
                 <section className="hero is-danger py-1 my-0">
-  <div className="hero-body pt-1 mb-0 pb-0">
-  <div className='level-left is-full-width pb-2'><span className='level-item title is-size-2 has-text-white'> CURRENT PROJECTS</span></div> 
-  </div>
-</section>    
+                    <div className="hero-body pt-1 mb-0 pb-0">
+                        <div className='level-left is-full-width pb-2'><span className='level-item title is-size-2 has-text-white'> CURRENT PROJECTS</span></div>
+                    </div>
+                </section>
                 <CardDeck className='section columns py-5 is-desktop has-background-white'>
                     {/* <div className='level-left is-full-width pb-4'><span className='level-item title is-size-2 has-text-white'>    CURRENT PROJECTS</span></div> */}
                     {cards}

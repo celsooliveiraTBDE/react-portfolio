@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 3001;
 //MONGOOSE CONFIG
 
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://localhost/react-blog-application', {useNewUrlParser: true})
+mongoose.connect('mongodb://celso:Celsinho211!@ds039431.mlab.com:39431/heroku_9518s1k0', {useNewUrlParser: true})
 mongoose.set ('useFindAndModify', false)
 
 // MIDDLEWARE

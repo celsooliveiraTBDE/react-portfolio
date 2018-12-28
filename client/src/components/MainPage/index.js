@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar'
+import Navbar from '../Navbar'
 import MyTitleBanner from './MyTitleBanner'
  
 export default class MainTile extends React.Component {

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
-import { fetchPosts } from '../actions';
+import { fetchPosts } from '../../actions';
 import _ from "lodash";
 
-import MktNavbar from './MktNavBar'
-import Navbar from "./Navbar";
-import Sidebar from './Sidebar'
-import Footer from './Footer'
+import MktNavbar from '../Navbar/MktNavBar'
+import Navbar from "../Navbar";
+import Sidebar from '../Sidebar/Sidebar'
+import Footer from '../Footer'
 
 
 class PostsIndex extends Component {
@@ -36,7 +36,7 @@ class PostsIndex extends Component {
                 <section className="columns is-gapless">
                     <div className="column is-one-fifth">
                         <div id='my-sidebar-on-mobile' className='hero is-dark is-fullheight'>
-                        <Navbar />
+                            <Navbar />
 
                             <Sidebar />
                         </div>
