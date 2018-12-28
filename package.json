@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "nodemon server/src/app.js",
+    "server": "node server/src/app.js",
     "client": "node server/src/start-client.js",
     "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1",
     "lint": "eslint ."

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import MktNavbar from './components/MktNavBar'
-import MainTile from './components/MainTile'
-import Footer from "./components/Footer"
-import Resume from './components/Resume'
+import MktNavbar from '../Navbar/MktNavBar'
+import MainTile from '../MainPage'
+import Footer from "../Footer"
 class App extends Component {
   render() {
     return (

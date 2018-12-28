@@ -37,7 +37,7 @@ export default class Sidebar extends React.Component {
                     <hr className="navbar-divider is-full-width is-primary has-background-grey-dark" />
 
                     <SocialBar />
-<br/>
+                    <br />
                     <NavItem className="container is-gapless has-text-centered-mobile">
                         <NavLink className="title is-focused is-4 level-item " href="/about">About</NavLink>
                     </NavItem>

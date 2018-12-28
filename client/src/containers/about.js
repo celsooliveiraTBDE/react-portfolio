@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import MktNavbar from './MktNavBar'
-import Navbar from "./Navbar";
-import Footer from "./Footer"
-import Resume from './Resume'
+import MktNavbar from '../components/Navbar/MktNavBar'
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
 class About extends Component {
   render() {
     return (
@@ -16,7 +15,6 @@ class About extends Component {
             <div className='level-left is-full-width pb-2'><span className='level-item title is-size-2 has-text-white'> AT A GLANCE</span></div>
           </div>
         </section>
-        <Resume />
         <Footer></Footer>
       </div>
     );
