@@ -7,14 +7,10 @@ const mongoose = require('mongoose')
 // to be used
 const session = require('express-session');
 const cors = require('cors');
-const errorHandler = require('errorhandler');
 
 
 // ROUTES FILES
 const indexRouter = require('./routes/index');
-const blogRouter = require('./routes/blog');
-const commentsRouter = require('./routes/comment')  //Import routes for "catalog" area of site
-const usersRouter = require('./routes/user')
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -33,11 +29,17 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({ secret: 'LightBlog', cookie: { maxAge: 60000 }, resave: false, saveUninitialized: false }));
 
+if (process.env.NODE_ENV === "production") {
+  // console.log('---------test----------');
+  app.use(express.static("client/build"));
+}
 
-app.use('/', indexRouter);
-app.use('/blog', blogRouter);  // Add catalog routes to middleware chain.
-app.use('/comment', commentsRouter);
-app.use('/users', usersRouter);
+app.use(indexRouter);
+
+
+app.use('*', function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 // ERROR HANDLING 
 
