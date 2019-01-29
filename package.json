@@ -4,11 +4,13 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start:dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node app.js",
+    "build": "cd client && npm run build",
     "server": "node app.js",
     "client": "node start-client.js",
-    "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1",
-    "lint": "eslint ."
+    "heroku-postbuild": "npm run build"
   },
   "author": "Celso Oliveira",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "event-stream": "^4.0.1",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
+    "if-env": "^1.0.4",
     "mongoose": "^5.3.12",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.6",
