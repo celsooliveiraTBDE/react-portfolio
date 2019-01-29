@@ -10,7 +10,7 @@
     "build": "cd client && npm run build",
     "server": "node app.js",
     "client": "node start-client.js",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Celso Oliveira",
   "license": "ISC",
