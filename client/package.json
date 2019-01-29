@@ -11,6 +11,7 @@
     "react-addons-css-transition-group": "^15.6.2",
     "react-burger-menu": "^2.5.4",
     "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0",
     "react-parallax": "^2.0.1",
     "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
@@ -21,11 +22,19 @@
     "redux-form": "^7.4.2",
     "redux-promise": "^0.6.0"
   },
+  "devDependencies": {
+    "bulma": "^0.7.2",
+    "concurrently": "^3.6.1",
+    "node-sass": "^4.9.2"
+  },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"npm run dev\" \"npm run css-watch\"",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "css-build": "node-sass --omit-source-map-url src/sass/main.scss src/sass/css/main.css",
+    "css-watch": "npm run css-build -- --watch"
   },
   "engines": {
     "node": "10.x"

@@ -9,17 +9,17 @@ import {
 
 const items = [
   {
-    src: '../assets/project-images/streetart.png',
+    src: '../project-images/streetart.png',
     altText: 'Street Art Finder',
     caption: 'Instagrammable Art in the City of Angels'
   },
   {
-    src: '../assets/project-images/scrn-canvas.png',
+    src: '../project-images/scrn-canvas.png',
     altText: 'DRNX Canvas',
     caption: 'Bartenders: Fund your Dreams'
   },
   {
-    src: '../assets/project-images/Astrolab2.png',
+    src: '../project-images/Astrolab4.png',
     altText: 'AR Camera App',
     caption: 'Browseable Google Map Immersive Experience'
   }

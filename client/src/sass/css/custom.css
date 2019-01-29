@@ -3,17 +3,17 @@ html {
     height: 100%;
 }
 
-#main-tile-image {
+#main-tile-image, #project-tile-image {
     /* The image used */
     background-image: url("../../assets/sunsetVentura.jpg");
 }
 
 #project-tile-image {
     /* The image used */
-    background-image: url("../../assets/IMG_2949.JPG");
-    
+    /* background-image: url("../../assets/IMG_2949.JPG");
+     */
 }
-
+/* specifies background image config */
 .bg {
     /* Full height */
     height: 100%;
@@ -55,6 +55,9 @@ hr.navbar-divider {
 
 
 }
+.column.card{
+    max-height: min-content;
+}
 
 .level-item {
     display: inline-flex;
@@ -74,12 +77,13 @@ hr.navbar-divider {
 }
 @media screen and (min-width: 1024px){
 .navbar {
-    min-height: 2rem;
+    min-height: 1rem;
+    padding-bottom: 0px;
 }
 
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 769px) {
 
     .inner {
         padding: 50px;
@@ -91,6 +95,10 @@ hr.navbar-divider {
     #my-sidebar-on-mobile {
         min-height: auto
     }
+    .inner {
+        padding-top: 115px;
+        padding-left: 35px;
+    }
 
     .title{
         font-size: 1rem; 
@@ -100,15 +108,17 @@ hr.navbar-divider {
     }
 
 }
+
 .footer{
     padding-top: 1rem;
     padding-bottom: 1rem;
+    background-color: transparent; 
 }
 
 a.has-text-link:hover, a.has-text-link:focus{
     color: #FF5733 !important
 }
-
+/* transition title  */
 .example-appear {
     opacity: 0.01;
   }
@@ -124,6 +134,7 @@ a.has-text-link:hover, a.has-text-link:focus{
   .carousel-inner{
       padding: 5rem;
   }
+  
   #resume-container{
       background-color: #707070;
       margin: 0%;
@@ -131,9 +142,81 @@ a.has-text-link:hover, a.has-text-link:focus{
   }
 
   .bg-light {
-    background-color: none;
+    background-color: red;
   }
   .dropdown-menu.show {
    
     background: transparent;
   }
+/* begin styling of social buttons */
+
+
+
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    border-radius: 50%;
+    padding: 4px; 
+  
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin-in {
+    background: #007bb5;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+    border-radius: 50%;
+    padding: 1px; 
+
+
+  }
+  
+
+  .fa-rss {
+    background: #ff6600;
+    color: white;
+  }
+ /* svg{
+     border-radius: 50%;
+ }
+ svg{
+     height: 48px;
+     width: 48px;  
+
+ } */
+
+ .myheight{
+     height: 30px; 
+     min-height: 2px;
+
+ }

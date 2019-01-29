@@ -1,19 +1,21 @@
-import React, { Component } from 'react';
-import Navbar from '../Navbar'
+import React from 'react';
 import MyTitleBanner from './MyTitleBanner'
- 
+import AppWrapper from '../AppWrapper'
+
+const imageId = 'main-tile-image'
 export default class MainTile extends React.Component {
 
+
+
+  render() {
+    return (
+      <AppWrapper image={imageId} className="hero bg is-danger is-large">
    
-            
-            render(){
-              return(
-            <div id='main-tile-image' className='hero bg is-danger is-fullheight'>
-<Navbar className="is-fixed-top"/>
-              <div className='inner '>
-<MyTitleBanner/>
-              </div>
-            </div>
-              )
-            }
+        <div className='inner'>
+          <MyTitleBanner />
+        </div>
+        </AppWrapper>
+
+    )
+  }
 }

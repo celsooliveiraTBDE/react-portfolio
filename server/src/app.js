@@ -13,7 +13,7 @@ const errorHandler = require('errorhandler');
 
 // ROUTES FILES
 const indexRouter = require('./routes/index');
-const catalogRouter = require('./routes/blog');
+const blogRouter = require('./routes/blog');
 const commentsRouter = require('./routes/comment')  //Import routes for "catalog" area of site
 const usersRouter = require('./routes/user')
 
@@ -36,7 +36,7 @@ app.use(session({ secret: 'LightBlog', cookie: { maxAge: 60000 }, resave: false,
 
 
 app.use('/', indexRouter);
-app.use('/blog', catalogRouter);  // Add catalog routes to middleware chain.
+app.use('/blog', blogRouter);  // Add catalog routes to middleware chain.
 app.use('/comment', commentsRouter);
 app.use('/users', usersRouter);
 

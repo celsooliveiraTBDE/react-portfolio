@@ -2,7 +2,7 @@ import React from "react";
 export default class Resume extends React.Component {
   render() {
     return (
-      <div id='resume-container'className="container is-danger pb-4">
+      <div id=''className="container is-fluid is-danger py-4">
           <div className="tile is-ancestor">
             <div className="tile is-vertical is-8">
 
